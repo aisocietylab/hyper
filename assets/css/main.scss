@@ -1,0 +1,77 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+search: false
+---
+@charset "utf-8";
+
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+
+/* ==========================================================================
+   My skin (copied Air skin)
+   ========================================================================== */
+
+/* Colors */
+$background-color: #eeeeee !default;
+$text-color: #222831 !default;
+$muted-text-color: #393e46 !default;
+$primary-color: #0092ca !default;
+$border-color: mix(#fff, #393e46, 75%) !default;
+$footer-background-color: $primary-color !default;
+$link-color: #393e46 !default;
+$masthead-link-color: $text-color !default;
+$masthead-link-color-hover: $text-color !default;
+$navicon-link-color-hover: mix(#fff, $text-color, 80%) !default;
+
+.page__footer {
+  color: #fff !important; // override
+}
+
+.page__footer-follow .social-icons .svg-inline--fa {
+  color: inherit;
+}
+
+// import minimal-mistakes
+@import "minimal-mistakes"; // main partials
+
+table {
+    display: table;
+    //every second row slighlty darker
+
+    tbody tr:nth-child(odd) {
+        //background-color: #f9f9f9;
+        background-color: mix($background-color, #000, 95%);
+    }
+}
+
+h1 {
+    padding-top: 1.5em;
+}
+
+.page__hero--overlay {
+    padding-top: 3em;
+}
+
+.masthead {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-bottom: 0;
+    z-index: 1000;
+
+    .masthead__menu {
+        width: fit-content;
+        margin: auto;
+    }
+}
+
+// Navbar inspired by: https://www.danielstoopendaal.nl/
+.greedy-nav {
+    border-radius: 0.6rem !important;
+    backdrop-filter: blur(.3rem);
+    background-color: mix($border-color, #ffffff00, 80%);
+}
+
+.greedy-nav .visible-links {
+    justify-content: center;
+}
