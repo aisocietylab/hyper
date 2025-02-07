@@ -1,7 +1,7 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
 search: false
 ---
+// Design inspired by: https://calm-workshop-2024.github.io/schedule/
 @charset "utf-8";
 
 
@@ -11,7 +11,7 @@ search: false
    My skin (copied Air skin)
    ========================================================================== */
 
-/* Colors */
+/* Colors (Air skin) */
 $background-color: #eeeeee !default;
 $text-color: #222831 !default;
 $muted-text-color: #393e46 !default;
@@ -23,33 +23,37 @@ $masthead-link-color: $text-color !default;
 $masthead-link-color-hover: $text-color !default;
 $navicon-link-color-hover: mix(#fff, $text-color, 80%) !default;
 
-.page__footer {
-  color: #fff !important; // override
-}
 
-.page__footer-follow .social-icons .svg-inline--fa {
-  color: inherit;
-}
+/* colors overwrite */
+$background-color: white;
+$border-color: black;
+$footer-background-color: $background-color;
+$primary-color: black;
 
 // import minimal-mistakes
 @import "minimal-mistakes"; // main partials
 
-table {
-    display: table;
-    //every second row slighlty darker
+$border-width: 2px; // border width
 
-    tbody tr:nth-child(odd) {
-        //background-color: #f9f9f9;
-        background-color: mix($background-color, #000, 95%);
-    }
-}
 
-h1 {
-    padding-top: 1.5em;
+h1#page-title {
+    color: $text-color;
 }
 
 .page__hero--overlay {
-    padding-top: 3em;
+    padding-top: 4em; // identical to height of masthead
+    padding-bottom: 1.5em;
+    margin-bottom: 0;
+
+    .page__title {
+        text-shadow: none !important;
+        padding-top: 1em;
+    }
+
+    .page__lead {
+        color: $muted-text-color !important;
+        text-shadow: none !important;
+    }
 }
 
 .masthead {
@@ -60,18 +64,95 @@ h1 {
     z-index: 1000;
 
     .masthead__menu {
-        width: fit-content;
+        //width: fit-content;
         margin: auto;
     }
 }
 
-// Navbar inspired by: https://www.danielstoopendaal.nl/
 .greedy-nav {
-    border-radius: 0.6rem !important;
-    backdrop-filter: blur(.3rem);
-    background-color: mix($border-color, #ffffff00, 80%);
+    backdrop-filter: blur(.1rem);
+    background-color: mix($background-color, #ffffff00, 70%); // make a bit transparent
+    // line border
+    border-top: $border-width solid $border-color;
+    border-bottom: $border-width solid $border-color;
+    // alt: round border
+    //border-radius: 0.6rem !important;
+
+    .visible-links {
+        justify-content: space-around;
+    }
 }
 
-.greedy-nav .visible-links {
-    justify-content: center;
+
+table {
+    display: table;
+    //every second row slighlty darker
+
+    thead {
+        background-color: $background-color;
+        border-top: $border-color solid $border-width;
+    }
+
+    //tbody tr:nth-child(odd) {
+    //    //background-color: #f9f9f9;
+    //    background-color: mix($background-color, #000, 95%);
+    //}
+    tbody {
+
+        tr:nth-child(even) {
+            //background-color: #f9f9f9;
+            background-color: mix($background-color, #1d3557, 70%);
+        }
+
+        // TODO: colors to variables
+        tr.break {
+            background-color: #f1faee;
+        }
+
+        tr.presentation {
+            background-color: #a8dadc;
+        }
+
+        tr.other {
+            background-color: #1d3557;
+            color: #f1faee;
+        }
+
+        tr.special {
+            //background-color: #e63946;
+            background-color: $background-color;
+        }
+    }
+}
+
+.page__content {
+    border-top: $border-width solid $border-color;
+
+    h1 {
+        padding-top: 1.5em;
+    }
+}
+
+
+.page__footer {
+    //color: #fff !important; // override
+    color: $text-color !important; // override
+    margin-top: 1em;
+
+    footer {
+        border-top: $border-width solid $border-color;
+        margin-top: 1em;
+        padding-top: 1em;
+
+        // follow and copyright texts
+        div {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: fit-content;
+        }
+    }
+}
+
+.page__footer-follow .social-icons .svg-inline--fa {
+    color: inherit;
 }
