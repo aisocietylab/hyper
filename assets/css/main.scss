@@ -29,21 +29,93 @@ $background-color: white;
 $border-color: black;
 $footer-background-color: $background-color;
 $primary-color: black;
+$text-color: black;
+$muted-text-color: #333;
 
 // import minimal-mistakes
 @import "minimal-mistakes"; // main partials
 
+$small: 320px !default;
+$medium: 600px !default;
+$medium-wide: 768px !default;
+$large: 1024px !default;
+$x-large: 1280px !default;
+$max-width: $x-large !default;
+
+@media (min-width: 80em) {
+    #main {
+        max-width: 80ch;
+    }
+
+    .masthead__inner-wrap {
+        max-width: 80ch;
+    }
+
+    .page__hero--overlay .wrapper {
+        max-width: 80ch;
+    }
+}
+
 $border-width: 2px; // border width
 
+// for page speed check
+@-webkit-keyframes intro {
+    0% {
+        opacity: 0.001;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes intro {
+    0% {
+        opacity: 0.001;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+// FIXME: overflow on the right
+#background-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.1;
+    margin: 0 1em;
+}
 
 h1#page-title {
     color: $text-color;
 }
 
+// added by me
+#page-subtitle {
+    //color: $muted-text-color;
+    color: $text-color;
+    font-size: 1.5em;
+    margin-top: 0.5em;
+
+    span {
+        color: $text-color;
+    }
+}
+
 .page__hero--overlay {
     padding-top: 4em; // identical to height of masthead
-    padding-bottom: 1.5em;
+    padding-bottom: 0;
     margin-bottom: 0;
+
+    .wrapper {
+        position: relative;
+        padding-bottom: 1.3em;
+    }
 
     .page__title {
         text-shadow: none !important;
@@ -53,6 +125,7 @@ h1#page-title {
     .page__lead {
         color: $muted-text-color !important;
         text-shadow: none !important;
+        margin-bottom: 0;
     }
 }
 

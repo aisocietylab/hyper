@@ -2,9 +2,8 @@
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
-title: 'HyPer:
-<br>
-Hybrid AI for Human-Centric Personalization'
+title: 'HyPer Workshop:'
+subtitle: "<span>Hy</span>brid AI for Human-Centric <span>Per</span>sonalization"
 
 excerpt: "DATE @ UMAP2025 LOCATION"
 
@@ -12,12 +11,7 @@ excerpt: "DATE @ UMAP2025 LOCATION"
 layout: splash
 header:
   overlay_color: "white"
-  #overlay_filter: "0.5"
-#  overlay_image: /assets/images/unsplash-image-1.jpg
-#  actions:
-#    - label: "Download"
-#      url: "https://github.com/mmistakes/minimal-mistakes/"
-#  caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
+  #background_text: "HyPer"
 locale: "en-US"
 ---
 
