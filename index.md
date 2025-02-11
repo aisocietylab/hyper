@@ -5,10 +5,11 @@
 title: 'HyPer Workshop:'
 subtitle: "<span>Hy</span>brid AI for Human-Centric <span>Per</span>sonalization"
 
-excerpt: "DATE @ UMAP2025 LOCATION"
+# TODO: set exact location (hall, room, etc.)
+excerpt: "June TBD @ UMAP2025 <a href='https://maps.app.goo.gl/FHEycRok827LTcJh8'>Verizon Executive Education Center</a>"
 
 # TODO: create new layout for workshops
-layout: splash
+layout: workshop
 header:
   overlay_color: "white"
   #background_text: "HyPer"
@@ -36,22 +37,24 @@ The HyPer workshop focuses on how hybrid AI approaches—combining neural archit
     </tr>
     <tr>
       <td>Paper Submissions</td>
-      <td>TBD</td>
+      <td>April 9, 2025</td>
     </tr>
     <tr>
       <td>Paper Notifications</td>
-      <td>TBD</td>
+      <td>April 28, 2025</td>
     </tr>
     <tr>
       <td>Camera-ready Submission</td>
-      <td>TBD</td>
+      <td>May 5, 2025</td>
     </tr>
     <tr>
       <td>Workshop date</td>
-      <td>TBD</td>
+      <td>June TBD, 2025</td>
     </tr>
   </tbody>
 </table>
+
+**All deadlines are at 11:59 pm AoE (Anywhere on Earth).**
 
 
 # Program
@@ -103,8 +106,45 @@ The HyPer workshop focuses on how hybrid AI approaches—combining neural archit
 
 # Organizers
 
-- Elisabeth Lex, Graz University of Technology
-- Kevin Innerebner, Graz University of Technology
-- Marko Tkalcic, University of Primorska
-- Dominik Kowald, Know Center Research GmbH & Graz University of Technology
-- Markus Schedl, Johannes Kepler University Linz & LIT AI Lab
+<!-- NOTE: images should be resized to be ~200x200px to reduce load time -->
+<div class="image_collection">
+  <div class="image_with_text">
+    <a href="https://elisabethlex.info/">
+      <img src="{{ '/assets/images/organizers/elisabeth-lex.jpg' | relative_url }}" alt="Elisabeth Lex" title="Elisabeth Lex">
+    </a>
+    <a href="https://elisabethlex.info/" class="image_title">Elisabeth Lex</a>
+    <a href="https://www.tugraz.at/institute/hcc/research/research-groups/ai-for-society">Graz University of Technology</a>
+  </div>
+  <div class="image_with_text">
+    <a href="https://kev-inn.github.io/">
+      <img src="{{ '/assets/images/organizers/kevin-innerebner.jpg' | relative_url }}" alt="Kevin Innerebner" title="Kevin Innerebner">
+    </a>
+    <a href="https://kev-inn.github.io/" class="image_title">Kevin Innerebner</a>
+    <a href="https://www.tugraz.at/institute/hcc/research/research-groups/ai-for-society">Graz University of Technology</a>
+  </div>
+  <div class="image_with_text">
+    <a href="https://markotkalcic.com/">
+      <img src="{{ '/assets/images/organizers/marko-tkalcic.jpg' | relative_url }}" alt="Marko Tkalčič" title="Marko Tkalčič">
+    </a>
+    <a href="https://markotkalcic.com/" class="image_title">Marko Tkalčič</a>
+    <a href="https://www.famnit.upr.si/en/">University of Primorska</a>
+  </div>
+  <div class="image_with_text">
+    <a href="https://domkowald.github.io/">
+      <img src="{{ '/assets/images/organizers/dominik-kowald.jpg' | relative_url }}" alt="Dominik Kowald" title="Dominik Kowald">
+    </a>
+    <a href="https://domkowald.github.io/" class="image_title">Dominik Kowald</a>
+    <a href="https://www.know-center.at/en/research/research-at-the-know-center/fair-ai/">Know Center Research GmbH</a>
+    <!--TODO: Change to TU Graz group link, once fixed (https://www.tugraz.at/institute/isds/research/research-groups/fair-ai) -->
+    <a href="https://www.tugraz.at/institute/hcc/home">Graz University of Technology</a>
+  </div>
+  <div class="image_with_text">
+    <a href="http://www.mschedl.eu/">
+      <img src="{{ '/assets/images/organizers/markus-schedl.jpg' | relative_url }}" alt="Markus Schedl" title="Markus Schedl">
+    </a>
+    <a href="http://www.mschedl.eu/" class="image_title">Markus Schedl</a>
+    <a href="https://www.jku.at/en/institute-of-computational-perception/">Johannes Kepler University Linz</a>
+    <a href="https://www.jku.at/en/lit-artificial-intelligence-lab/">LIT AI Lab</a>
+  </div>
+
+</div>

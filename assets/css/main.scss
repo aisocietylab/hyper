@@ -1,5 +1,5 @@
 ---
-search: false
+search: false 
 ---
 // Design inspired by: https://calm-workshop-2024.github.io/schedule/
 @charset "utf-8";
@@ -107,6 +107,13 @@ h1#page-title {
     }
 }
 
+a {
+    text-decoration: underline;
+}
+a:hover {
+    text-decoration: none;
+}
+
 .page__hero--overlay {
     padding-top: 4em; // identical to height of masthead
     padding-bottom: 0;
@@ -126,6 +133,15 @@ h1#page-title {
         color: $muted-text-color !important;
         text-shadow: none !important;
         margin-bottom: 0;
+
+        a {
+            color: $muted-text-color;
+            text-decoration: underline;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
     }
 }
 
@@ -150,6 +166,7 @@ h1#page-title {
     border-bottom: $border-width solid $border-color;
     // alt: round border
     //border-radius: 0.6rem !important;
+    padding: 0.2em 0;
 
     .visible-links {
         justify-content: space-around;
@@ -206,6 +223,39 @@ table {
     }
 }
 
+// Images with captions
+.image_collection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .image_with_text {
+        padding: 1.5em;
+        text-align: center;
+
+        img {
+            display: block;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: $border-width solid $border-color;
+            
+            margin: auto;
+        }
+
+        .image_title {
+            font-size: 1em;
+        }
+
+        a {
+            display: block;
+            margin-top: 0.2em;
+            font-size: 0.75em;
+        }
+    }
+}
+
 
 .page__footer {
     //color: #fff !important; // override
@@ -223,6 +273,15 @@ table {
             margin-right: auto;
             max-width: fit-content;
         }
+    }
+
+
+    a {
+        text-decoration: underline;
+    }
+
+    a:hover {
+        text-decoration: none;
     }
 }
 
