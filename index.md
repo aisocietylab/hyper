@@ -6,7 +6,7 @@ title: 'HyPer Workshop:'
 subtitle: "<span>Hy</span>brid AI for Human-Centric <span>Per</span>sonalization"
 
 # TODO: set exact location (hall, room, etc.)
-excerpt: "June TBD @ UMAP2025 <a href='https://maps.app.goo.gl/FHEycRok827LTcJh8'>Verizon Executive Education Center</a>"
+excerpt: "June **TBD** @ UMAP2025 <a href='https://maps.app.goo.gl/FHEycRok827LTcJh8'>Verizon Executive Education Center</a>"
 
 # TODO: create new layout for workshops
 layout: workshop
@@ -15,6 +15,9 @@ header:
   #background_text: "HyPer"
 locale: "en-US"
 ---
+
+<!-- Explain TBD -->
+**TBD**: To Be Determined
 
 # Objective
 
@@ -33,7 +36,7 @@ The HyPer workshop focuses on how hybrid AI approaches—combining neural archit
   <tbody>
     <tr>
       <td>Submission Site Open</td>
-      <td>TBD</td>
+      <td><strong>TBD</strong></td>
     </tr>
     <tr>
       <td>Paper Submissions</td>
@@ -49,17 +52,18 @@ The HyPer workshop focuses on how hybrid AI approaches—combining neural archit
     </tr>
     <tr>
       <td>Workshop date</td>
-      <td>June TBD, 2025</td>
+      <td>June <strong>TBD</strong>, 2025</td>
     </tr>
   </tbody>
 </table>
 
 **All deadlines are at 11:59 pm AoE (Anywhere on Earth).**
 
-
 # Program
 
-<table>
+The workshop program will be announced later.
+
+<!--<table>
   <thead>
     <tr>
       <th>Time (EDT)</th>
@@ -99,10 +103,22 @@ The HyPer workshop focuses on how hybrid AI approaches—combining neural archit
       <td>-</td>
     </tr>
   </tbody>
-</table>
-
+</table>-->
 
 # Call for Contributions
+
+The Hyper workshop aims to bridge the gap between sub-symbolic learning (e.g., neural networks) and symbolic knowledge representations (e.g., knowledge graphs, ontologies, logic-based models) to develop hybrid user models that better reflect human cognitive processes, social behaviors, and decision-making patterns.
+ 
+We invite research papers (short and long), extended abstracts, and position papers relevant to the workshop topics, which include, but are not limited to:
+ 
+- Methods for integrating symbolic knowledge and sub-symbolic learning in user modeling
+- Applications of cognitive theories and behavioral insights in hybrid AI models for personalization
+- Techniques for interpretability, explainability, and trust in hybrid AI systems
+- Methods for detecting and mitigating biases and unfairness in hybrid AI, e.g., by using symbolic approaches such as counterfactual fairness
+- Behavioral data analysis and user studies of cognitively-inspired modeling approaches
+Domain-specific implementations of hybrid AI models (e.g., e-learning, healthcare, finance, music)
+ 
+Paper lengths and formats, link to the submission system, and program committee members will be announced later.
 
 # Organizers
 
