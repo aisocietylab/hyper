@@ -1,8 +1,8 @@
----
+--- 
 search: false 
----
-// Design inspired by: https://calm-workshop-2024.github.io/schedule/
+--- 
 @charset "utf-8";
+// Design inspired by: https://calm-workshop-2024.github.io/schedule/
 
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
@@ -11,19 +11,6 @@ search: false
    My skin (copied Air skin)
    ========================================================================== */
 
-/* Colors (Air skin) */
-$background-color: #eeeeee !default;
-$text-color: #222831 !default;
-$muted-text-color: #393e46 !default;
-$primary-color: #0092ca !default;
-$border-color: mix(#fff, #393e46, 75%) !default;
-$footer-background-color: $primary-color !default;
-$link-color: #393e46 !default;
-$masthead-link-color: $text-color !default;
-$masthead-link-color-hover: $text-color !default;
-$navicon-link-color-hover: mix(#fff, $text-color, 80%) !default;
-
-
 /* colors overwrite */
 $background-color: white;
 $border-color: black;
@@ -31,6 +18,18 @@ $footer-background-color: $background-color;
 $primary-color: black;
 $text-color: black;
 $muted-text-color: #333;
+$link-color: $text-color;
+$table-other-color: #1d3557;
+$table-special-color: $background-color;
+$table-presentation-color: #a8dadc;
+$table-break-color: #f1faee;
+$table-even-color: mix($background-color, $table-other-color, 70%);
+
+
+/* Colors (Air skin) */
+$masthead-link-color: $text-color !default;
+$masthead-link-color-hover: $text-color !default;
+$navicon-link-color-hover: mix(#fff, $text-color, 80%) !default;
 
 // import minimal-mistakes
 @import "minimal-mistakes"; // main partials
@@ -110,28 +109,61 @@ h1#page-title {
 a {
     text-decoration: underline;
 }
+
 a:hover {
     text-decoration: none;
+}
+
+.page__hero--overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // table other color
+    background-color: rgba($background-color, 0.85);
 }
 
 .page__hero--overlay {
     padding-top: 4em; // identical to height of masthead
     padding-bottom: 0;
     margin-bottom: 0;
+    // background image
+    background-size: auto calc(100% - 2.5em);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+
+
+    .page__hero-caption {
+        left: 50%;
+        right: auto;
+        transform: translate(-50%, 0);
+        font-size: 0.4em;
+        border-radius: 4px 4px 0 0;
+        padding: 3px 5px 0;
+        opacity: 0.65;
+    }
 
     .wrapper {
         position: relative;
-        padding-bottom: 1.3em;
+        padding-bottom: 2.0em;
     }
 
     .page__title {
-        text-shadow: none !important;
+        //text-shadow: none !important;
+        text-shadow: 1px 1px 2px white;
         padding-top: 1em;
     }
 
+    .page__subtitle {
+        text-shadow: 1px 1px 2px white;
+    }
+
     .page__lead {
+        //text-shadow: none !important;
+        text-shadow: 1px 1px 2px white;
         color: $muted-text-color !important;
-        text-shadow: none !important;
         margin-bottom: 0;
 
         a {
@@ -153,7 +185,6 @@ a:hover {
     z-index: 1000;
 
     .masthead__menu {
-        //width: fit-content;
         margin: auto;
     }
 }
@@ -164,8 +195,6 @@ a:hover {
     // line border
     border-top: $border-width solid $border-color;
     border-bottom: $border-width solid $border-color;
-    // alt: round border
-    //border-radius: 0.6rem !important;
     padding: 0.2em 0;
 
     .visible-links {
@@ -176,41 +205,34 @@ a:hover {
 
 table {
     display: table;
-    //every second row slighlty darker
 
     thead {
         background-color: $background-color;
         border-top: $border-color solid $border-width;
     }
 
-    //tbody tr:nth-child(odd) {
-    //    //background-color: #f9f9f9;
-    //    background-color: mix($background-color, #000, 95%);
-    //}
+    //every second row slightly darker
     tbody {
 
         tr:nth-child(even) {
-            //background-color: #f9f9f9;
-            background-color: mix($background-color, #1d3557, 70%);
+            background-color: $table-even-color;
         }
 
-        // TODO: colors to variables
         tr.break {
-            background-color: #f1faee;
+            background-color: $table-break-color;
         }
 
         tr.presentation {
-            background-color: #a8dadc;
+            background-color: $table-presentation-color;
         }
 
         tr.other {
-            background-color: #1d3557;
-            color: #f1faee;
+            background-color: $table-other-color;
+            color: $table-break-color;
         }
 
         tr.special {
-            //background-color: #e63946;
-            background-color: $background-color;
+            background-color: $table-special-color;
         }
     }
 }
@@ -240,7 +262,7 @@ table {
             border-radius: 50%;
             object-fit: cover;
             border: $border-width solid $border-color;
-            
+
             margin: auto;
         }
 
@@ -253,12 +275,15 @@ table {
             margin-top: 0.2em;
             font-size: 0.75em;
         }
+
+        a:visited {
+            color: $muted-text-color;
+        }
     }
 }
 
 
 .page__footer {
-    //color: #fff !important; // override
     color: $text-color !important; // override
     margin-top: 1em;
 

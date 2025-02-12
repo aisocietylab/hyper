@@ -13,11 +13,13 @@ layout: workshop
 header:
   overlay_color: "white"
   #background_text: "HyPer"
+  overlay_image: '/assets/images/New-York-Cityscape-Silhouette.svg'
+  caption: "Photo credit: [**Gordon Dylan Johnson**](https://openclipart.org/detail/279645/new-york-cityscape-silhouette)"
 locale: "en-US"
 ---
 
 <!-- Explain TBD -->
-**TBD**: To Be Determined
+<small>**TBD**: To Be Determined</small>
 
 # Objective
 
